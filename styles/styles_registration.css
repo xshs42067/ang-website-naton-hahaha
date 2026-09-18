@@ -1,0 +1,165 @@
+.registration {
+    background: #fff;
+    border: 2px solid #0b6ec8;
+    border-radius: 6px;
+    overflow: hidden;
+    animation: cardReveal 0.5s ease forwards;
+    border: 1px solid #dfeaff;
+}
+.registration-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.registration-actions button {
+    background: #fff;
+    color: #0b6ec8;
+    border: 1px solid #dfeaff;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.registration-title {
+    background: #0b6ec8;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registration-table-wrap {
+    overflow-x: auto;
+    padding: 15px;
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #111;
+    font-size: 14px;
+}
+
+.registration-table th,
+.registration-table td {
+    padding: 2px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.registration-table th {
+    width: 13%;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.registration-table td:nth-child(2) {
+    width: 37%;
+}
+
+.registration-table td:nth-child(4) {
+    width: 37%;
+}
+
+.student-name {
+    font-weight: 700;
+}
+
+.student-name span {
+    color: #f00000;
+}
+
+.portal_content h2 {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    animation: cardReveal 0.25s ease forwards;
+}
+
+@media (max-width: 700px) {
+    .registration,
+    .registration-table-wrap,
+    .registration-table,
+    .registration-table tbody,
+    .registration-table tr,
+    .registration-table th,
+    .registration-table td {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .registration-table-wrap {
+        overflow-x: hidden;
+        padding: 12px;
+    }
+
+    .registration-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .registration-actions {
+        width: 100%;
+    }
+
+    .registration-actions button {
+        flex: 1;
+    }
+
+    .registration-table,
+    .registration-table tbody,
+    .registration-table tr,
+    .registration-table th,
+    .registration-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .registration-table tr {
+        margin-bottom: 12px;
+    }
+
+    .registration-table th {
+        padding: 6px 0 4px;
+        white-space: normal;
+    }
+
+    .registration-table td {
+        padding: 0 0 6px;
+    }
+
+    .registration-table input,
+    .registration-table select,
+    .registration-table textarea {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 38px;
+        padding: 8px 10px;
+        border: 1px solid #d2d9ed;
+        border-radius: 5px;
+        background: #f8f9fd;
+        color: #222b54;
+        font: inherit;
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .registration-table textarea {
+        height: auto;
+        min-height: 78px;
+        resize: vertical;
+    }
+}

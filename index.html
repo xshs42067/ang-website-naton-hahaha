@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Student Access Module | IUIS</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <div class="login_form">
+    <img class="logo" src="images/favicon.png" alt="WVSU Logo"><img class="logo" src="images/npcview.png" alt="DPS">
+    <form action="pages/dashboard.html">
+      <div class="role_select">
+        <label for="login_role">Login as:</label>
+        <select id="login_role" name="login_role">
+          <option value="student">Student</option>
+          <option value="alumni">Alumni</option>
+        </select>
+      </div>
+      <div class="input_box">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required />
+      </div>
+      <div class="input_box">
+        <label for="password">Password</label>
+        <div class="password_box">
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        </div>
+      </div>
+      <div class="input_box">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+      </div>
+      <button type="submit">Log In</button>
+      <p class="bottom_text">Forgot your details? Please contact the MIS office at the 2nd floor of the Admin building.
+      </p>
+    </form>
+  </div>
+
+</body>
+
+<footer class="login_footer">
+  <p>Student Access Module</p>
+  <h6>Copyright 2018 Integrated University Information System (IUIS) - Pinnacle Technologies, Inc. All Rights Reserved
+  </h6>
+</footer>

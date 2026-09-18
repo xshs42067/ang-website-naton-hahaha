@@ -1,0 +1,111 @@
+/* this file was created specifically just for the spacing between the two tables. */
+.class-offerings-box  {
+    background: #fff;
+    border: 1px solid #cfd9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #18295F14;
+    animation: cardReveal 0.5s ease forwards;
+    margin-top: 20px !important;
+}
+
+#receipt-form .registration-table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+#receipt-form .registration-table th {
+    padding: 10px 12px 10px 0;
+    color: #1b255a;
+    vertical-align: middle;
+}
+
+#receipt-form .registration-table td {
+    padding: 0 20px 0 0;
+    vertical-align: middle;
+}
+
+#receipt-form .registration-table input,
+#receipt-form .registration-table select,
+#receipt-form .registration-table textarea {
+    width: 100%;
+    border: 1px solid #d2d9ed;
+    border-radius: 5px;
+    padding: 10px 12px;
+    background: #f8f9fd;
+    color: #222b54;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+#receipt-form .registration-table input,
+#receipt-form .registration-table select {
+    height: 42px;
+}
+
+#receipt-form .registration-table textarea {
+    min-height: 92px;
+    resize: vertical;
+}
+
+#receipt-form .registration-table input:focus,
+#receipt-form .registration-table select:focus,
+#receipt-form .registration-table textarea:focus {
+    border-color: #0b6ec8;
+    box-shadow: 0 0 0 2px #0b6ec826;
+}
+
+#receipt-form #receipt-file {
+    padding: 8px;
+    background: #fff;
+}
+
+#receipt-form small {
+    display: block;
+    margin-top: 5px;
+    color: #707894;
+    font-size: 11px;
+}
+
+#receipt-form button[type="submit"] {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 16px;
+    background: #0b6ec8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#receipt-form button[type="submit"]:hover {
+    background: #095a9f;
+}
+
+@media (max-width: 700px) {
+    #receipt-form,
+    #receipt-form .registration-table-wrap,
+    #receipt-form .registration-table {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #receipt-form .registration-table,
+    #receipt-form .registration-table tbody,
+    #receipt-form .registration-table tr,
+    #receipt-form .registration-table th,
+    #receipt-form .registration-table td {
+        display: block;
+        width: 100%;
+    }
+
+    #receipt-form .registration-table th {
+        padding: 0 0 5px;
+    }
+
+    #receipt-form .registration-table td {
+        padding: 0;
+    }
+}

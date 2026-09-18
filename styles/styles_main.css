@@ -1,0 +1,164 @@
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+
+.details-table {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 0;
+    text-align: left;
+    border-collapse: collapse;
+
+}
+
+.student_details {
+    width: 50%;
+}
+
+.student_details .details-table,
+.student_details #progressbar {
+    width: 100%;
+}
+
+.details-table .categ {
+    width: 120px;
+    font-weight: 700;
+    padding-right: 20px;
+    color: #000758;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+    padding-top: 5px;
+    /* ADJUST SPACING VERTICALLY HERE */
+}
+
+.details-table .info {
+    font-weight: 400;
+    color: #000758;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 5px;
+    /* ADJUST SPACING VERTICALLY HERE part two haha */
+}
+
+.portal_card .profile_photo {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 180px;
+}
+
+.portal_card .profile_photo img {
+    height: 100%;
+    width: auto;
+    display: block;
+    border-style: groove;
+    border-radius: 20px;
+}
+
+/* from stackoverflow too */
+.portal_grid .portal_card {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: cardReveal 0.5s ease forwards;
+}
+
+.portal_grid .portal_card:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.portal_grid .portal_card:nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.portal_grid .portal_card:nth-child(3) {
+    animation-delay: 0.28s;
+}
+
+.portal_grid .portal_card:nth-child(4) {
+    animation-delay: 0.38s;
+}
+
+.portal_grid .portal_card:nth-child(5) {
+    animation-delay: 0.48s;
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.balance-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #035aa7;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.balance-link:hover {
+    text-decoration: underline;
+}
+
+#content {
+    font-weight: 400;
+}
+
+.faculty_eval p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.faculty_lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.faculty_lists h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.faculty_lists ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style: disc;
+}
+
+.faculty_lists li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+    .faculty_eval {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .simple_bar {
+        width: 180px;
+        height: 160px;
+    }
+
+    .faculty_lists {
+        grid-template-columns: 1fr;
+    }
+    .portal_card {
+        padding: 10px;
+    }
+}

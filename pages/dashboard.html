@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - IUIS</title>
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../styles/styles_main.css">
+</head>
+
+<body>
+  <!--navigation tab thingy-->
+  <main class="portal_page">
+    <nav class="portal_nav">
+      <img src="../images/favicon.png" alt="WVSU Logo"> <!--HEHHEHE-->
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="inbox.html">Messages</a>
+      <a href="academics.html">Academics</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="faculty_evaluation.html">Faculty Evaluation</a>
+      <a href="accounts.html">Finance and Accounts</a>
+      <hr>
+      <a href="profile.html">Account &amp; Security</a>
+      <a href="../index.html">Log out</a>
+      <a href="mailto:mis@wvsu.edu.ph" class="contact">Help</a>
+      <p id="loggedin">Logged in as 2025M1173</p>
+    </nav>
+
+    <!--main content-->
+    <div class="cards">
+      <h1>Dashboard</h1>
+      <div class="portal_grid">
+        <div class="portal_card">
+          <h2>Student Information</h2>
+
+          <div class="student_details">
+            <a class="button" href="profile.html">Edit details</a>
+
+            <table class="details-table">
+              <tr>
+                <th scope="row" class="categ">Student ID:</th>
+                <td class="info">123456789</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Name:</th>
+                <td class="info">Dimitrius Damarcus Bartholomew James Jr. III</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Course:</th>
+                <td class="info">Bachelor of Science in Psychology</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Year Level:</th>
+                <td class="info">3rd Year</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Email:</th>
+                <td class="info">johndoe@example.com</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Contact Number:</th>
+                <td class="info">+63 912 345 6789</td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="categ">Address:</th>
+                <td class="info">Brgy. Pitipiwpiw, Molo, Iloilo, Region VI (WV), 5000</td>
+              </tr>
+            </table>
+
+            <!-- PROGRESS BAR!-->
+            <div id="progressbar">
+              <div style="width: 75%;"> <!-- edit ang bar size here -->
+                <p>Your profile is <span>75%</span> updated.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile_photo">
+            <img src="../images/OrieChef.webp" alt="Profile Photo">
+          </div>
+
+        </div>
+
+        <!-- Announcements-->
+        <div class="portal_card">
+          <h2>Announcements</h2>
+          <table class="sections">
+            <tr>
+              <th id="content">Please be informed that the Registration and Enrollment period for School Year 2026-2027,
+                First Semester is now closed. You may contact or visit the Registrar Office for your concern.</th>
+            </tr>
+            <tr>
+              <th id="content">Please be informed to be present at the upcoming earthquake drill at September 10, 2026
+                at 2:30PM.</th>
+            </tr>
+          </table>
+        </div>
+
+        <!--Faculty Evaluation-->
+        <div class="portal_card evaluation">
+          <h2>Online Faculty Evaluation School <br>Year 2025-2026 First Semester</h2>
+          <div class="faculty_eval">
+            <div class="simple_bar"><span>0%</span></div>
+            <p>You have completed or submitted 0% of your evaluation. You can view the details in the Faculty Evaluation
+              tab.</p>
+          </div>
+          <a class="button" href="faculty_evaluation.html">Evaluate</a>
+          <div class="faculty_lists">
+            <div>
+              <h3>Completed:</h3>
+              <ul>
+                <li>Armada, Keia Joy Harder</li>
+                <li>Raborar, Neiljan C.</li>
+                <li>Tangub, Vijay</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Pending:</h3>
+              <ul>
+                <li>Armada, Keia Joy Harder</li>
+                <li>Raborar, Neiljan C.</li>
+                <li>Tangub, Vijay</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--BALANCES-->
+        <div class="portal_card">
+          <h2>Student Account Progress</h2>
+
+          <div id="twoprogressbar">
+            <div class="left" style="width: 70%;">
+              <p>Total Payments: <span>₱35,000.00</span></p>
+            </div>
+            <div class="right" style="width: 30%;">
+              <p>Total Balance/Refund: <span>₱3,750.00</span></p>
+            </div>
+          </div>
+
+          <table class="sections">
+            <tr>
+              <th scope="row">Tuition fee</th>
+              <td>₱28,500.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Tutorial fee (3rd Term/Summer, AY 2025-2026)</th>
+              <td>₱6,000.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Other fees</th>
+              <td>₱4,250.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Total fees</th>
+              <td>₱38,750.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Total payments</th>
+              <td>₱35,000.00</td>
+            </tr>
+            <tr>
+              <th scope="row">Total balance</th>
+              <td style="font-weight: 650;">₱3,750.00</td>
+            </tr>
+          </table>
+          <a class="balance-link" href="accounts.html">View fee details</a>
+        </div>
+        
+        <div class="portal_card">
+          <h2>Overall Student Progress</h2>
+          <p>You've completed <span>32%</span> of your classes' overall assigned curriculum.</p>
+          <div id="progressbar">
+            <div style="width: 32%;">
+              <p><span>32%</span></p>
+            </div>
+          </div>
+          <a class="button" href="academics_tabs/mygrades.html">View grades</a>
+          <table class="sections">
+            <tr>
+              <th>Overall GWA:</th>
+              <td>1.61</td>
+            </tr>
+            <tr>
+              <th>Academic Total Units Earned:</th>
+              <td>66</td>
+            </tr>
+            <tr>
+              <th>Academic Units:</th>
+              <td>60</td>
+            </tr>
+            <tr>
+              <th>Non-academic Units:</th>
+              <td>6</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<footer class="site_footer">
+  <p>Student Access Module</p>
+  <h6>Copyright 2018 Integrated University Information System (IUIS) - Pinnacle Technologies, Inc. All Rights Reserved
+  </h6>
+</footer>
+
+</html>
