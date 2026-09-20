@@ -368,15 +368,55 @@ form button:hover {
 
 @media (max-width: 700px) {
     .portal_page {
-        padding-left: 0;
+        padding-left: 0 !important;
     }
 
     .portal_page .portal_nav {
-        position: static;
+        position: relative !important;
+        inset: auto !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
         min-height: auto;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 12px;
+        background: #ffffff;
+        border-bottom: 1px solid #e7ecff;
+    }
+
+    .portal_page .portal_nav img {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 4px;
+    }
+
+    .portal_page .portal_nav a,
+    .portal_page .portal_nav .contact,
+    .portal_nav #loggedin {
         width: 100%;
-        flex-direction: row;
-        /* TURNS INTO ROWS kung ma detect nga mobile version */
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .portal_page .portal_nav hr {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .portal_page .portal_nav .contact,
+    .portal_nav #loggedin {
+        grid-column: 1 / -1;
     }
 
     .cards .portal_grid {
@@ -654,12 +694,13 @@ https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css
         width: 100%;
         min-height: auto;
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 6px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
         padding: 12px;
     }
 
     .portal_page .portal_nav img {
+        grid-column: 1 / -1;
         justify-self: center;
         width: 42px;
         height: 42px;
@@ -668,8 +709,11 @@ https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css
     }
 
     .portal_page .portal_nav a {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        min-height: 44px;
         padding: 8px 6px;
         font-size: 12px;
         text-align: center;
@@ -677,6 +721,7 @@ https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css
     }
 
     .portal_page .portal_nav hr {
+        grid-column: 1 / -1;
         width: 100%;
         margin: 2px 0;
     }
@@ -688,10 +733,16 @@ https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css
 
     .portal_page .portal_nav .contact {
         margin-top: 0;
+        text-align: center;
+        justify-self: center;
+        grid-column: 1 / -1;
     }
 
     .portal_nav #loggedin {
         margin-top: 0;
+        text-align: center;
+        justify-self: center;
+        grid-column: 1 / -1;
     }
 
     .portal_content {
@@ -862,6 +913,40 @@ https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css
 
     .site_footer h6 {
         font-size: 10px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+    .cards .portal_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portal_grid .portal_card:first-child .student_details {
+        width: 100%;
+    }
+
+    .portal_grid .portal_card:first-child .student_details .button {
+        position: static;
+        display: block;
+        width: 100%;
+        margin: 12px 0 14px;
+    }
+
+    .portal_grid .portal_card:first-child .profile_photo {
+        position: static;
+        width: min(100%, 220px);
+        height: auto;
+        margin: 18px auto 0;
+        transform: none;
+    }
+
+    .portal_grid .portal_card:first-child .profile_photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+        object-fit: contain;
+        border-radius: 8px;
     }
 }
 

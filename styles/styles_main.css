@@ -14,12 +14,17 @@ tr {
 }
 
 .student_details {
-    width: 50%;
+    width: min(50%, calc(100% - 220px));
+    min-width: 0;
 }
 
 .student_details .details-table,
 .student_details #progressbar {
     width: 100%;
+}
+
+.student_details .details-table {
+    table-layout: fixed;
 }
 
 .details-table .categ {
@@ -29,7 +34,8 @@ tr {
     color: #000758;
     text-align: left;
     vertical-align: top;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     padding-top: 5px;
     /* ADJUST SPACING VERTICALLY HERE */
 }
@@ -40,14 +46,46 @@ tr {
     text-align: left;
     vertical-align: top;
     padding-top: 5px;
+    overflow-wrap: anywhere;
     /* ADJUST SPACING VERTICALLY HERE part two haha */
+}
+
+@media (min-width: 701px) {
+    .portal_grid .portal_card:first-child .student_details .button {
+        position: static;
+        display: block;
+        width: max-content;
+        margin: 0 0 14px auto;
+    }
+
+    .portal_grid .evaluation h2 {
+        padding-right: 125px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .portal_grid .portal_card:first-child h2 {
+        max-width: calc(100% - 150px);
+    }
+
+    .portal_grid .portal_card:first-child .student_details {
+        padding-top: 10px;
+    }
+
+    .portal_grid .portal_card:first-child .student_details .button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: auto;
+        margin: 0;
+    }
 }
 
 .portal_card .profile_photo {
     position: absolute;
     right: 30px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* vertical center */
     height: 180px;
 }
 
@@ -107,6 +145,7 @@ tr {
     text-decoration: none;
 }
 
+/* fee details */
 .balance-link:hover {
     text-decoration: underline;
 }
@@ -160,5 +199,14 @@ tr {
     }
     .portal_card {
         padding: 10px;
+    }
+
+    .portal_nav #loggedin {
+        text-align: center;
+        justify-self: center;
+    }
+    .portal_nav .contact {
+        justify-self: center;
+        text-align: center;
     }
 }
