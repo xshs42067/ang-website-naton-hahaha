@@ -1,1 +1,1 @@
-"# ang-website-naton-hahaha" 
+"# This is a group project for CIT-206 - Platform Technologies. It is a redesign of the IUIS Student Access Module of West Visayas State University that will mainly focus on improving overall user experience, layout, navigation and other features." 
