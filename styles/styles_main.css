@@ -190,8 +190,9 @@ tr {
     }
 
     .simple_bar {
-        width: 180px;
-        height: 160px;
+        width: min(110px, 100%);
+        height: auto;
+        aspect-ratio: 1;
     }
 
     .faculty_lists {
